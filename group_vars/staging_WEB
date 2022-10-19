@@ -1,0 +1,4 @@
+---
+
+ansible_user : ubuntu
+ansible_ssh_privat_key_file : /mnt/h/Task/Ansible/keys/.ssh/key_001.pem

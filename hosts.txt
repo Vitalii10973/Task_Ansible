@@ -1,0 +1,5 @@
+[staging_WEB]
+My_WEB_server ansible_host=35.180.63.104
+
+[staging_DB]
+My_DB_server ansible_host=13.38.85.86

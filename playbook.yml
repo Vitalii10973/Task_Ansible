@@ -1,0 +1,9 @@
+---
+- name: Install Lampstack and Upload project files
+  hosts: all
+  become: yes
+
+  roles:
+    - { role: deploy_apache, when: ansible_host == 'staging_WEB' }
+    - { role: deploy_php, when: ansible_host == 'staging_WEB' }
+    - { role: deploy_db, when: ansible_host  == 'staging_DB' }

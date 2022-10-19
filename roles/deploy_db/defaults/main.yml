@@ -1,0 +1,4 @@
+---
+# defaults file for deploy_db
+
+destin_folder: /var/lib/mysql/

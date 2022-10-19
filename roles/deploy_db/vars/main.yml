@@ -1,0 +1,6 @@
+---
+# vars file for deploy_db
+
+db_user: root
+db_pass: password123
+db_name: php_mysql_crud

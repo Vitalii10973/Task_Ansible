@@ -1,0 +1,22 @@
+---
+# tasks file for deploy_apache
+
+- name: Install Apache Web Server
+  apt: name=apacke2 state=latest
+
+- name: Start Web Server service
+  service: name=apacke2 state=started enabled=yes
+
+- name: list files
+  find:
+    paths: "{{ role_path }}/files/"
+    file_type: any
+  register: files
+
+- name: Copy project files to Web Server
+  copy:
+    src: "{{ item.path }}"
+    dest: dest={{ destin_folder }} mode=0555
+  loop: "{{ files.files }}"
+  notify:
+    - Restart Apache
